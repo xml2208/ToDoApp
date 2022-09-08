@@ -20,12 +20,6 @@ import com.example.todoapp.R
 @Composable
 fun ListScreen(onPlusClicked: () -> Unit) {
     Scaffold(
-        topBar = {
-            ToDoAppBar(
-                currentScreen = Screens.ListScreen,
-                isAddTaskScreen = false,
-            )
-        },
         floatingActionButton = {
             FloatingActionButton(onClick = {
                 onPlusClicked()
