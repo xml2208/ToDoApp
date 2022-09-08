@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -48,8 +49,10 @@ fun ToDoAppBar(
 }
 
 @Composable
-fun ToDoApp() {
-    val navController = rememberNavController()
+fun ToDoApp(
+    navController: NavHostController = rememberNavController()
+) {
+
     val backStackEntry by navController.currentBackStackEntryAsState()
 
     Scaffold(topBar = {
